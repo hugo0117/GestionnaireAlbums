@@ -1,0 +1,37 @@
+﻿<Window x:Class="WPFApp.views.AddNewTrack"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFApp.views"
+        mc:Ignorable="d"
+        Title="AddNewTrack" Height="435.338" Width="554.136" MinWidth="854.136" MinHeight="545.338" MaxWidth="854.136" MaxHeight="545.338">
+    <StackPanel Background="{StaticResource DescriptifAlbumColor}">
+        <StackPanel Margin="0" Height="110" Orientation="Horizontal">
+            <TextBlock Margin="100,23,0,24" Padding="0,23,0,0" Text="Entrer le nom du morceau" Foreground="White" FontFamily="DejaVu Serif Condensed" FontSize="14"/>
+            <TextBox Name="TextNameT" Background="#FFF1C232" DockPanel.Dock="Left" Width="131" Height="38" Margin="112,24,0,24" />
+            
+        </StackPanel>
+
+        <StackPanel Margin="0" Height="110" Orientation="Horizontal">
+            <TextBlock Margin="100,44,0,0" Width="218" Foreground="White" FontFamily="DejaVu Serif Condensed" FontSize="14"><Run Text="Entrer le genre du morceau"/><Run Text=","/><LineBreak/><Run Text="laisser vide pour prendre le "/><LineBreak/><Run Text="genre de l'album"/></TextBlock>
+            <TextBox Name="TextGenreT" Background="{StaticResource CaseColor}" Width="131" Height="38" Margin="64,26,0,27" />
+            <StackPanel Margin="43,0,0,0" Width="286">
+                <Button Width="217" Content="Chercher un fichier audio" Click="AddSong_Click" Background="{DynamicResource CheckImageButtonColor}" FontFamily="DejaVu Sans" FontSize="14"/>
+                <TextBlock Name="SongBox"  Text="" TextWrapping ="Wrap"  Height="77" TextAlignment="Center" FontFamily="DejaVu Sans" FontSize="14" Foreground="White"/>
+
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Height="110" Orientation="Horizontal">
+            <TextBlock Margin="100,46,0,0" Foreground="White" FontFamily="DejaVu Serif Condensed" FontSize="14" Width="181"><Run Text="Entrer la durée du morceau"/><LineBreak/><Run Text="en minutes et secondes"/></TextBlock>
+            <TextBox Name="TextMinT" Background="{StaticResource CaseColor}" Width="36" Height="38" Margin="101,34,-20,33" Padding="1" />
+            <TextBox Name="TextSecT" Background="{StaticResource CaseColor}" Width="38" Height="38" Margin="47,34,0,33" Padding="1" />
+        </StackPanel>
+        <StackPanel Margin="0" Height="110" Orientation="Horizontal">
+            <TextBlock Margin="100,23,0,24" Padding="0,23,0,0" Text="Entrer le numero du morceau" Foreground="White" FontFamily="DejaVu Serif Condensed" FontSize="14"/>
+            <TextBox Name="TextNomTrack" Background="{StaticResource CaseColor}" DockPanel.Dock="Left" Width="131" Height="38" Margin="91,24,0,24" />
+        </StackPanel>
+        
+        <Button Background="{StaticResource AddButtonAlbumBlue}" Content="Ajouter le morceau" Height="75" Click="AddTrackOnClicked" FontSize="17" FontFamily="DejaVu Sans"/>
+    </StackPanel>
+</Window>
